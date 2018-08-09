@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Sample API",
+        "contact": {
+            "name": "Marco Raddatz",
+            "url": "https://www.marcoraddatz.com"
+        },
+        "version": "1.0"
+    },
+    "host": "laravel.localhost",
+    "basePath": "",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/agency": {
+            "post": {
+                "tags": [
+                    "Agency"
+                ],
+                "summary": "T\u1ea1o c\u1eeda h\u00e0ng m\u1edbi",
+                "description": "\r\n     *   Ghi ch\u00fa\r\n     *   name : H\u1ecd t\u00ean\r\n     *   email : Email\r\n     *   phone: S\u1ed1 \u0111i\u1ec7n tho\u1ea1i\r\n     *   address : \u0110\u1ecba ch\u1ec9\r\n     *   code_id : S\u1ed1 ch\u1ee9ng minh th\u01b0\r\n     *   issued_date : Ng\u00e0y c\u1ea5p\r\n     *   issued_from : N\u01a1i c\u1ea5p\r\n     *   job : c\u00f4ng vi\u1ec7c\r\n     *   address_agency : \u0110\u1ecba ch\u1ec9 \u0111\u1ea1i l\u00fd\r\n     *   total_area : T\u1ed5ng di\u1ec7n t\u00edch\r\n     *   length : Chi\u1ec1u d\u00e0i\r\n     *   wide : chi\u1ec1u r\u1ed9ng\r\n     *   height: Chi\u1ec1u cao\r\n     *   time_start : Th\u1eddi gian b\u1eaft \u0111\u1ea7u\r\n     *   status: tr\u1ea1ng th\u00e1i",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/AgencyDTO"
+                        }
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "type": "string",
+                        "default": "kensei9x"
+                    }
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Error": {
+            "required": [
+                "code",
+                "message"
+            ],
+            "properties": {
+                "code": {
+                    "description": "Class ApiController",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "Class ApiController",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
