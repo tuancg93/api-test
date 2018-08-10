@@ -10,5 +10,7 @@
 |
 */
 
-Route::get('/bind', '\Api\TestController@index');
+Route::get('/bind', 'RoutesController@index');
+
+
 

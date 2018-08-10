@@ -14,33 +14,16 @@ use App\Http\Controllers\ApiController;
 class TestController extends ApiController
 {
     /**
-     * @SWG\Post( path="/agency", summary="Tạo cửa hàng mới", description="
-     *   Ghi chú
-     *   name : Họ tên
-     *   email : Email
-     *   phone: Số điện thoại
-     *   address : Địa chỉ
-     *   code_id : Số chứng minh thư
-     *   issued_date : Ngày cấp
-     *   issued_from : Nơi cấp
-     *   job : công việc
-     *   address_agency : Địa chỉ đại lý
-     *   total_area : Tổng diện tích
-     *   length : Chiều dài
-     *   wide : chiều rộng
-     *   height: Chiều cao
-     *   time_start : Thời gian bắt đầu
-     *   status: trạng thái",
-     *   tags={"Agency"},
-     *   middleware="auth",
+     * @SWG\Get( path="/app/{id}", summary="Chi tiết app", tags={"App"}, produces={"application/json"},
+     *     @SWG\Parameter( in="path", name="id", required=true),
+     *     @SWG\Parameter( in="query", name="f"),
+     *     @SWG\Parameter( in="header", type="string", name="Authorization", default="", required=true))
      *
-     *   produces={"application/json"},
-     * @SWG\Parameter( in="body", name="data", required=true, @SWG\Schema(ref="#/definitions/AgencyDTO")),
-     * @SWG\Parameter( in="header", type="string", name="Authorization", default="kensei9x", required=true))
-     *
+     * @ScopeId(description="Xem chi tiết", ignore="true")
      */
-    function index(){
-
+    function index()
+    {
+        echo 232323;
 
     }
 }

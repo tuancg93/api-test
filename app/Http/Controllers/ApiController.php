@@ -19,16 +19,25 @@ use Illuminate\Routing\Controller as BaseController;
  *     basePath="",
  *     host="laravel.localhost",
  *     schemes={"http"},
+ *
  *     @SWG\Info(
  *         version="1.0",
- *         title="Sample API",
+ *         title="1m52",
  *         @SWG\Contact(name="Marco Raddatz", url="https://www.marcoraddatz.com"),
+ *     )
+ * ),
+ * @SWG\Response(
+ *     response="BaseResponse",
+ *     description="base response",
+ *     @SWG\Schema(
+ *          @SWG\Property(
+ *              property="status",
+ *              type="string"
+ *          )
  *     )
  * )
  */
 class ApiController extends BaseController
 {
-    function index(){
-        echo 2323;
-    }
+
 }
