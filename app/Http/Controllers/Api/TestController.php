@@ -10,20 +10,50 @@ namespace App\Http\Controllers\Api;
 
 
 use App\Http\Controllers\ApiController;
+use Illuminate\Http\Request;
 
 class TestController extends ApiController
 {
     /**
-     * @SWG\Get( path="/app/{id}", summary="Chi tiết app", tags={"App"}, produces={"application/json"},
-     *     @SWG\Parameter( in="path", name="id", required=true),
-     *     @SWG\Parameter( in="query", name="f"),
-     *     @SWG\Parameter( in="header", type="string", name="Authorization", default="", required=true))
-     *
-     * @ScopeId(description="Xem chi tiết", ignore="true")
+     * @SWG\Get(
+     *     path="/create",
+     *     tags={"App"},
+     *     description="Return a user's first and last name"
+     * )
      */
-    function index()
+    function index(Request $request)
     {
-        echo 232323;
+
+        return response(["abc"=>$request], 200)
+            ->header('Content-Type', 'application/json');
+
+    }
+
+    /**
+     * @SWG\Get(
+     *     path="/haha",
+     *     tags={"App"},
+     *     description="Return a user's first and last name",
+     *     @SWG\Parameter(
+     *         name="firstname",
+     *         in="query",
+     *         type="string",
+     *         description="Your first name",
+     *         required=true,
+     *     ),
+     *     @SWG\Parameter(
+     *         name="lastname",
+     *         in="query",
+     *         type="string",
+     *         description="Your last name",
+     *         required=true,
+     *     )
+     * )
+     */
+    function haha(Request $request)
+    {
+        return response(["abc"=>$request->query()], 200)
+            ->header('Content-Type', 'application/json');
 
     }
 }

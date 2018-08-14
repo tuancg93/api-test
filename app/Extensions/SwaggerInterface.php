@@ -1,5 +1,5 @@
 <?php
-namespace App\Swagger;
+namespace App\Extensions;
 
 interface SwaggerInterface{
     function scan();

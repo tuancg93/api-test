@@ -8,18 +8,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Extensions\SwaggerInterface;
+
 
 class RoutesController
 {
+    protected $swaggerApi;
+    function __construct(SwaggerInterface $swaggerApi)
+    {
+        $this->swaggerApi = $swaggerApi;
+    }
+
     function index()
     {
-        $path = app_path('Http/Controllers/');
-        $read = \Swagger\scan($path);
-
-        header('Content-Type: application/json');
-        echo $read;
-        exit;
-        return json_enconde($read);
-
+        return $this->swaggerApi->scan();
     }
 }

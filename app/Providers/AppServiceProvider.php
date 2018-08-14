@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use App\Swagger\SwaggerApi;
-use App\Swagger\SwaggerInterface;
+use App\Extensions\SwaggerApi;
+use App\Extensions\SwaggerInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

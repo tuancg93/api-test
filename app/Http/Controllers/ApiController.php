@@ -9,31 +9,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
-
 /**
- * Class ApiController
- *
- * @package App\Http\Controllers
- *
  * @SWG\Swagger(
  *     basePath="",
- *     host="laravel.localhost",
+ *     host="127.0.0.1:8000",
  *     schemes={"http"},
- *
  *     @SWG\Info(
  *         version="1.0",
  *         title="1m52",
+ *          description="fap fap fap",
  *         @SWG\Contact(name="Marco Raddatz", url="https://www.marcoraddatz.com"),
- *     )
- * ),
- * @SWG\Response(
- *     response="BaseResponse",
- *     description="base response",
- *     @SWG\Schema(
- *          @SWG\Property(
- *              property="status",
- *              type="string"
- *          )
  *     )
  * )
  */

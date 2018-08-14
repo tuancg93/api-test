@@ -13,4 +13,8 @@
 Route::get('/bind', 'RoutesController@index');
 
 
+Route::namespace('Api')->group(function () {
+    Route::get('/create','TestController@index');
+    Route::get('/haha','TestController@haha');
+});
 
