@@ -24,5 +24,8 @@ use Illuminate\Routing\Controller as BaseController;
  */
 class ApiController extends BaseController
 {
+    function abc(){
+        echo 22323;
+    }
 
 }

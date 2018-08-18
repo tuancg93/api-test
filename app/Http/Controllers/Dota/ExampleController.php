@@ -6,50 +6,32 @@
  * Time: 10:38 AM
  */
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Dota;
 
 
 use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 
-class TestController extends ApiController
+class ExampleController extends ApiController
 {
     /**
      * @SWG\Get(
-     *     path="/test",
-     *     tags={"Test"},
+     *     path="/example",
+     *     tags={"Example"},
      *     description="Return a user's first and last name"
      * )
      */
     function index(Request $request)
     {
-
         return response(["abc"=>$request], 200)
             ->header('Content-Type', 'application/json');
 
     }
 
     /**
-     * @SWG\Get(
-     *     path="/fapnhau",
-     *     tags={"Test"},
-     *     description="Return a user's first and last name"
-     * )
-     */
-    function index1(Request $request)
-    {
-        echo "chic";
-        exit;
-        return response(["abc" => $request], 200)
-            ->header('Content-Type', 'application/json');
-    }
-
-
-
-        /**
      * @SWG\POST(
-     *     path="/test",
-     *     tags={"Test"},
+     *     path="/example",
+     *     tags={"Example"},
      *     description="Return a user's first and last name",
      *     @SWG\Parameter(
      *         name="firstname",
